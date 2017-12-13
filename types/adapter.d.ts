@@ -9,7 +9,10 @@ export interface Adapter {
  * @hidden
  */
 export declare class USBAdapter implements Adapter {
-    private getWebCapability(device);
+    private getBosDescriptor(device, callback);
+    private getDeviceCapabilities(device, callback);
+    private getCapabilities(device);
+    private getWebCapability(capabilities);
     private getWebUrl(device, capability);
     private getStringDescriptor(device, index);
     private decodeVersion(version);
