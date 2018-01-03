@@ -16,9 +16,6 @@ export declare class USBDevice {
     serialNumber: string;
     url: string;
     opened: boolean;
-    /**
-     * @hidden
-     */
     constructor(init?: Partial<USBDevice>);
     open(): Promise<void>;
     close(): Promise<void>;
