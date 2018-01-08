@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>USBOutTransferResult | Node WebUSB</title>
+	<title>USBAlternateInterface | Node WebUSB</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -51,8 +51,28 @@
 		<li class=" tsd-kind-class">
 			<a href="../classes/usbdevice.html" class="tsd-kind-icon">USBDevice</a>
 		</li>
-		<li class=" tsd-kind-interface">
+		<li class="current tsd-kind-interface">
 			<a href="usbalternateinterface.html" class="tsd-kind-icon">USBAlternate<wbr>Interface</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#alternatesetting" class="tsd-kind-icon">alternate<wbr>Setting</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#endpoints" class="tsd-kind-icon">endpoints</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#interfaceclass" class="tsd-kind-icon">interface<wbr>Class</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#interfacename" class="tsd-kind-icon">interface<wbr>Name</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#interfaceprotocol" class="tsd-kind-icon">interface<wbr>Protocol</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="usbalternateinterface.html#interfacesubclass" class="tsd-kind-icon">interface<wbr>Subclass</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="usbconfiguration.html" class="tsd-kind-icon">USBConfiguration</a>
@@ -87,16 +107,8 @@
 		<li class=" tsd-kind-interface">
 			<a href="usbisochronousouttransferresult.html" class="tsd-kind-icon">USBIsochronous<wbr>Out<wbr>Transfer<wbr>Result</a>
 		</li>
-		<li class="current tsd-kind-interface">
+		<li class=" tsd-kind-interface">
 			<a href="usbouttransferresult.html" class="tsd-kind-icon">USBOut<wbr>Transfer<wbr>Result</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="usbouttransferresult.html#byteswritten" class="tsd-kind-icon">bytes<wbr>Written</a>
-				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="usbouttransferresult.html#status" class="tsd-kind-icon">status</a>
-				</li>
-			</ul>
 		</li>
 	</ul>
 </nav>
@@ -106,7 +118,7 @@
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">USBOutTransferResult</span>
+					<span class="target">USBAlternateInterface</span>
 				</li>
 			</ul>
 		</section>
@@ -117,8 +129,12 @@
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbouttransferresult.html#byteswritten" class="tsd-kind-icon">bytes<wbr>Written</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbouttransferresult.html#status" class="tsd-kind-icon">status</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#alternatesetting" class="tsd-kind-icon">alternate<wbr>Setting</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#endpoints" class="tsd-kind-icon">endpoints</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#interfaceclass" class="tsd-kind-icon">interface<wbr>Class</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#interfacename" class="tsd-kind-icon">interface<wbr>Name</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#interfaceprotocol" class="tsd-kind-icon">interface<wbr>Protocol</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="usbalternateinterface.html#interfacesubclass" class="tsd-kind-icon">interface<wbr>Subclass</a></li>
 						</ul>
 					</section>
 				</div>
@@ -127,16 +143,44 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="byteswritten" class="tsd-anchor"></a>
-				<h3>bytes<wbr>Written</h3>
-				<div class="tsd-signature tsd-kind-icon">bytes<wbr>Written<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<a name="alternatesetting" class="tsd-anchor"></a>
+				<h3>alternate<wbr>Setting</h3>
+				<div class="tsd-signature tsd-kind-icon">alternate<wbr>Setting<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="status" class="tsd-anchor"></a>
-				<h3>status</h3>
-				<div class="tsd-signature tsd-kind-icon">status<span class="tsd-signature-symbol">:</span> <a href="../enums/usbtransferstatus.html" class="tsd-signature-type">USBTransferStatus</a></div>
+				<a name="endpoints" class="tsd-anchor"></a>
+				<h3>endpoints</h3>
+				<div class="tsd-signature tsd-kind-icon">endpoints<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="usbendpoint.html" class="tsd-signature-type">USBEndpoint</a><span class="tsd-signature-symbol">&gt;</span></div>
+				<aside class="tsd-sources">
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="interfaceclass" class="tsd-anchor"></a>
+				<h3>interface<wbr>Class</h3>
+				<div class="tsd-signature tsd-kind-icon">interface<wbr>Class<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="interfacename" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> interface<wbr>Name</h3>
+				<div class="tsd-signature tsd-kind-icon">interface<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="interfaceprotocol" class="tsd-anchor"></a>
+				<h3>interface<wbr>Protocol</h3>
+				<div class="tsd-signature tsd-kind-icon">interface<wbr>Protocol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="interfacesubclass" class="tsd-anchor"></a>
+				<h3>interface<wbr>Subclass</h3>
+				<div class="tsd-signature tsd-kind-icon">interface<wbr>Subclass<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 				</aside>
 			</section>

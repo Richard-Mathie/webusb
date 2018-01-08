@@ -1,21 +1,30 @@
-import { USBDirection, USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBConfiguration, USBDirection, USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+/**
+ * USB Device class
+ */
 export declare class USBDevice {
-    usbVersionMajor: number;
-    usbVersionMinor: number;
-    usbVersionSubminor: number;
-    deviceClass: number;
-    deviceSubclass: number;
-    deviceProtocol: number;
-    vendorId: number;
-    productId: number;
-    deviceVersionMajor: number;
-    deviceVersionMinor: number;
-    deviceVersionSubminor: number;
-    manufacturerName: string;
-    productName: string;
-    serialNumber: string;
-    url: string;
-    opened: boolean;
+    readonly usbVersionMajor: number;
+    readonly usbVersionMinor: number;
+    readonly usbVersionSubminor: number;
+    readonly deviceClass: number;
+    readonly deviceSubclass: number;
+    readonly deviceProtocol: number;
+    readonly vendorId: number;
+    readonly productId: number;
+    readonly deviceVersionMajor: number;
+    readonly deviceVersionMinor: number;
+    readonly deviceVersionSubminor: number;
+    readonly manufacturerName: string;
+    readonly productName: string;
+    readonly serialNumber: string;
+    readonly configuration?: USBConfiguration;
+    readonly configurations: Array<USBConfiguration>;
+    readonly opened: boolean;
+    readonly url: string;
+    /**
+     * USB Device constructor
+     * @param init A partial class to initialise values
+     */
     constructor(init?: Partial<USBDevice>);
     open(): Promise<void>;
     close(): Promise<void>;
