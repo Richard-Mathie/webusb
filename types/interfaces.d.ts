@@ -24,6 +24,15 @@ export declare enum USBEndpointType {
     "interrupt" = 1,
     "isochronous" = 2,
 }
+/**
+ * USB Options interface
+ */
+export interface USBOptions {
+    /**
+     * A `device found` callback function to allow the user to select a device
+     */
+    devicesFound?: (devices: Array<USBDevice>, selectFn: (device: USBDevice) => void) => USBDevice;
+}
 export interface USBDeviceFilter {
     vendorId?: number;
     productId?: number;
@@ -34,7 +43,7 @@ export interface USBDeviceFilter {
 }
 export interface USBDeviceRequestOptions {
     filters: Array<USBDeviceFilter>;
-    deviceFound: (device: USBDevice, selectFn: any) => void;
+    deviceFound?: (device: USBDevice, selectFn: any) => void;
 }
 export interface USBControlTransferParameters {
     requestType: USBRequestType;
