@@ -1,29 +1,5 @@
+import { USBRequestType, USBRecipient, USBTransferStatus, USBDirection, USBEndpointType } from "./enums";
 import { USBDevice } from "./device";
-export declare enum USBRequestType {
-    "standard" = 0,
-    "class" = 1,
-    "vendor" = 2,
-}
-export declare enum USBRecipient {
-    "device" = 0,
-    "interface" = 1,
-    "endpoint" = 2,
-    "other" = 3,
-}
-export declare enum USBTransferStatus {
-    "ok" = 0,
-    "stall" = 1,
-    "babble" = 2,
-}
-export declare enum USBDirection {
-    "in" = 0,
-    "out" = 1,
-}
-export declare enum USBEndpointType {
-    "bulk" = 0,
-    "interrupt" = 1,
-    "isochronous" = 2,
-}
 /**
  * USB Options interface
  */
@@ -44,36 +20,6 @@ export interface USBDeviceFilter {
 export interface USBDeviceRequestOptions {
     filters: Array<USBDeviceFilter>;
     deviceFound?: (device: USBDevice, selectFn: any) => void;
-}
-export interface USBControlTransferParameters {
-    requestType: USBRequestType;
-    recipient: USBRecipient;
-    request: number;
-    value: number;
-    index: number;
-}
-export interface USBInTransferResult {
-    data?: DataView;
-    status: USBTransferStatus;
-}
-export interface USBOutTransferResult {
-    bytesWritten: number;
-    status: USBTransferStatus;
-}
-export interface USBIsochronousInTransferPacket {
-    data?: DataView;
-    status: USBTransferStatus;
-}
-export interface USBIsochronousInTransferResult {
-    data?: DataView;
-    packets: Array<USBIsochronousInTransferPacket>;
-}
-export interface USBIsochronousOutTransferPacket {
-    bytesWritten: number;
-    status: USBTransferStatus;
-}
-export interface USBIsochronousOutTransferResult {
-    packets: Array<USBIsochronousOutTransferPacket>;
 }
 export interface USBControlTransferParameters {
     requestType: USBRequestType;

@@ -1,4 +1,5 @@
-import { USBConfiguration, USBDirection, USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBDirection } from "./enums";
+import { USBConfiguration, USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
 /**
  * USB Device class
  */
@@ -17,10 +18,14 @@ export declare class USBDevice {
     readonly manufacturerName: string;
     readonly productName: string;
     readonly serialNumber: string;
-    readonly configuration?: USBConfiguration;
+    readonly configuration: USBConfiguration;
     readonly configurations: Array<USBConfiguration>;
     readonly opened: boolean;
     readonly url: string;
+    /**
+     * @hidden
+     */
+    readonly _handle: any;
     /**
      * USB Device constructor
      * @param init A partial class to initialise values
@@ -28,16 +33,25 @@ export declare class USBDevice {
     constructor(init?: Partial<USBDevice>);
     open(): Promise<void>;
     close(): Promise<void>;
-    selectConfiguration(_configurationValue: number): Promise<void>;
-    claimInterface(_interfaceNumber: number): Promise<void>;
-    releaseInterface(_interfaceNumber: number): Promise<void>;
-    selectAlternateInterface(_interfaceNumber: number, _alternateSetting: number): Promise<void>;
-    controlTransferIn(_setup: USBControlTransferParameters, _length: number): Promise<USBInTransferResult>;
-    controlTransferOut(_setup: USBControlTransferParameters, _data?: BufferSource): Promise<USBOutTransferResult>;
-    clearHalt(_direction: USBDirection, _endpointNumber: number): Promise<void>;
-    transferIn(_endpointNumber: number, _length: number): Promise<USBInTransferResult>;
-    transferOut(_endpointNumber: number, _data: BufferSource): Promise<USBOutTransferResult>;
-    isochronousTransferIn(_endpointNumber: number, _packetLengths: Array<number>): Promise<USBIsochronousInTransferResult>;
-    isochronousTransferOut(_endpointNumber: number, _data: BufferSource, _packetLengths: Array<number>): Promise<USBIsochronousOutTransferResult>;
+    selectConfiguration(configurationValue: number): Promise<void>;
+    claimInterface(interfaceNumber: number): Promise<void>;
+    releaseInterface(interfaceNumber: number): Promise<void>;
+    selectAlternateInterface(interfaceNumber: number, alternateSetting: number): Promise<void>;
+    controlTransferIn(setup: USBControlTransferParameters, length: number): Promise<USBInTransferResult>;
+    controlTransferOut(setup: USBControlTransferParameters, data?: BufferSource): Promise<USBOutTransferResult>;
+    transferIn(endpointNumber: number, length: number): Promise<USBInTransferResult>;
+    transferOut(endpointNumber: number, data: BufferSource): Promise<USBOutTransferResult>;
     reset(): Promise<void>;
+    /**
+     * @hidden
+     */
+    clearHalt(_direction: USBDirection, _endpointNumber: number): Promise<void>;
+    /**
+     * @hidden
+     */
+    isochronousTransferIn(_endpointNumber: number, _packetLengths: Array<number>): Promise<USBIsochronousInTransferResult>;
+    /**
+     * @hidden
+     */
+    isochronousTransferOut(_endpointNumber: number, _data: BufferSource, _packetLengths: Array<number>): Promise<USBIsochronousOutTransferResult>;
 }

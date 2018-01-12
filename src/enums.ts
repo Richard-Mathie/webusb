@@ -1,4 +1,3 @@
-"use strict";
 /*
 * Node WebUSB
 * Copyright (c) 2017 Rob Moran
@@ -23,7 +22,30 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 */
-const usb_1 = require("./usb");
-module.exports = new usb_1.USB();
 
-//# sourceMappingURL=index.js.map
+export enum USBRequestType {
+    standard = 0x00,
+    class = 0x20,
+    vendor = 0x40
+}
+
+export enum USBRecipient {
+    device = 0x00,
+    interface = 0x01,
+    endpoint = 0x02,
+    other = 0x03
+}
+
+export enum USBTransferStatus {
+    "ok",
+    "stall",
+    "babble"
+}
+
+export type USBDirection = "in" | "out";
+
+export enum USBEndpointType {
+    "bulk",
+    "interrupt",
+    "isochronous"
+}
