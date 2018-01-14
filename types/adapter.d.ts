@@ -19,6 +19,7 @@ export declare class USBAdapter extends EventEmitter {
     private getDeviceCapabilities(device, callback);
     private getBosDescriptor(device, callback);
     private getWebCapability(capabilities);
+    private decodeUUID(buffer);
     private getWebUrl(device, capability);
     private devicetoUSBDevice(handle);
     private decodeVersion(version);
