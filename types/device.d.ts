@@ -1,5 +1,6 @@
 import { USBDirection } from "./enums";
-import { USBConfiguration, USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBConfiguration } from "./configuration";
 /**
  * USB Device class
  */
@@ -18,8 +19,13 @@ export declare class USBDevice {
     readonly manufacturerName: string;
     readonly productName: string;
     readonly serialNumber: string;
-    readonly configuration: USBConfiguration;
+    private _configurations;
     readonly configurations: Array<USBConfiguration>;
+    /**
+     * @hidden
+     */
+    _currentConfiguration: number;
+    readonly configuration: USBConfiguration;
     readonly opened: boolean;
     readonly url: string;
     /**
@@ -27,16 +33,15 @@ export declare class USBDevice {
      */
     readonly _handle: string;
     /**
-     * USB Device constructor
-     * @param init A partial class to initialise values
+     * @hidden
      */
     constructor(init?: Partial<USBDevice>);
     open(): Promise<void>;
     close(): Promise<void>;
     selectConfiguration(configurationValue: number): Promise<void>;
+    selectAlternateInterface(interfaceNumber: number, alternateSetting: number): Promise<void>;
     claimInterface(interfaceNumber: number): Promise<void>;
     releaseInterface(interfaceNumber: number): Promise<void>;
-    selectAlternateInterface(interfaceNumber: number, alternateSetting: number): Promise<void>;
     controlTransferIn(setup: USBControlTransferParameters, length: number): Promise<USBInTransferResult>;
     controlTransferOut(setup: USBControlTransferParameters, data?: BufferSource): Promise<USBOutTransferResult>;
     transferIn(endpointNumber: number, length: number): Promise<USBInTransferResult>;

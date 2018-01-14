@@ -1,8 +1,8 @@
 /// <reference types="node" />
 import { EventEmitter } from "events";
-import { USBDevice } from "./device";
 import { USBDirection } from "./enums";
-import { USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBConfiguration, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
+import { USBDevice } from "./device";
 /**
  * @hidden
  */
@@ -11,6 +11,8 @@ export declare class USBAdapter extends EventEmitter {
     static EVENT_DEVICE_DISCONNECT: string;
     private devices;
     constructor();
+    private serialPromises<T>(task, params);
+    private serialDevicePromises<T>(task, device, descriptors);
     private loadDevices();
     private loadDevice(device);
     private getCapabilities(device);
@@ -23,21 +25,18 @@ export declare class USBAdapter extends EventEmitter {
     private getStringDescriptor(device, index);
     private bufferToDataView(buffer);
     private bufferSourceToBuffer(bufferSource);
-    private arrayBufferToBuffer(arrayBuffer);
     private getEndpoint(device, endpointNumber);
     private getInEndpoint(device, endpointNumber);
     private getOutEndpoint(device, endpointNumber);
-    private endpointToUSBEndpoint(endpoint);
-    private interfaceToUSBAlternateInterface(iface);
-    private interfacesToUSBInterface(interfaces);
-    private configDescriptorToUSBConfiguration(descriptor);
+    private endpointToUSBEndpoint(descriptor);
+    private interfaceToUSBAlternateInterface(device, descriptor);
+    private interfacesToUSBInterface(device, descriptors);
+    private configToUSBConfiguration(device, descriptor);
     private getDevice(handle);
     getUSBDevices(): Promise<Array<USBDevice>>;
     open(handle: string): Promise<void>;
     close(handle: string): Promise<void>;
     getOpened(handle: string): boolean;
-    getConfiguration(handle: string): USBConfiguration;
-    getConfigurations(handle: string): Array<USBConfiguration>;
     selectConfiguration(handle: string, id: number): Promise<void>;
     claimInterface(handle: string, address: number): Promise<void>;
     releaseInterface(handle: string, address: number): Promise<void>;

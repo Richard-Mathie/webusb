@@ -9,14 +9,6 @@ export declare enum USBRecipient {
     endpoint = 2,
     other = 3,
 }
-export declare enum USBTransferStatus {
-    "ok" = 0,
-    "stall" = 1,
-    "babble" = 2,
-}
+export declare type USBTransferStatus = "ok" | "stall" | "babble";
 export declare type USBDirection = "in" | "out";
-export declare enum USBEndpointType {
-    "bulk" = 0,
-    "interrupt" = 1,
-    "isochronous" = 2,
-}
+export declare type USBEndpointType = "bulk" | "interrupt" | "isochronous";

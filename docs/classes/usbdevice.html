@@ -31,26 +31,23 @@
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-enum">
-			<a href="../enums/usbendpointtype.html" class="tsd-kind-icon">USBEndpoint<wbr>Type</a>
-		</li>
-		<li class=" tsd-kind-enum">
 			<a href="../enums/usbrecipient.html" class="tsd-kind-icon">USBRecipient</a>
 		</li>
 		<li class=" tsd-kind-enum">
 			<a href="../enums/usbrequesttype.html" class="tsd-kind-icon">USBRequest<wbr>Type</a>
 		</li>
-		<li class=" tsd-kind-enum">
-			<a href="../enums/usbtransferstatus.html" class="tsd-kind-icon">USBTransfer<wbr>Status</a>
-		</li>
 		<li class=" tsd-kind-class">
 			<a href="usb.html" class="tsd-kind-icon">USB</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="usbalternateinterface.html" class="tsd-kind-icon">USBAlternate<wbr>Interface</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="usbconfiguration.html" class="tsd-kind-icon">USBConfiguration</a>
 		</li>
 		<li class="current tsd-kind-class">
 			<a href="usbdevice.html" class="tsd-kind-icon">USBDevice</a>
 			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class">
-					<a href="usbdevice.html#constructor" class="tsd-kind-icon">constructor</a>
-				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class">
 					<a href="usbdevice.html#deviceclass" class="tsd-kind-icon">device<wbr>Class</a>
 				</li>
@@ -140,11 +137,11 @@
 				</li>
 			</ul>
 		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbalternateinterface.html" class="tsd-kind-icon">USBAlternate<wbr>Interface</a>
+		<li class=" tsd-kind-class">
+			<a href="usbendpoint.html" class="tsd-kind-icon">USBEndpoint</a>
 		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbconfiguration.html" class="tsd-kind-icon">USBConfiguration</a>
+		<li class=" tsd-kind-class">
+			<a href="usbinterface.html" class="tsd-kind-icon">USBInterface</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usbcontroltransferparameters.html" class="tsd-kind-icon">USBControl<wbr>Transfer<wbr>Parameters</a>
@@ -156,13 +153,7 @@
 			<a href="../interfaces/usbdevicerequestoptions.html" class="tsd-kind-icon">USBDevice<wbr>Request<wbr>Options</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbendpoint.html" class="tsd-kind-icon">USBEndpoint</a>
-		</li>
-		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usbintransferresult.html" class="tsd-kind-icon">USBIn<wbr>Transfer<wbr>Result</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbinterface.html" class="tsd-kind-icon">USBInterface</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usbisochronousintransferpacket.html" class="tsd-kind-icon">USBIsochronous<wbr>InTransfer<wbr>Packet</a>
@@ -184,6 +175,12 @@
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="../globals.html#usbdirection" class="tsd-kind-icon">USBDirection</a>
+		</li>
+		<li class=" tsd-kind-type-alias">
+			<a href="../globals.html#usbendpointtype" class="tsd-kind-icon">USBEndpoint<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-type-alias">
+			<a href="../globals.html#usbtransferstatus" class="tsd-kind-icon">USBTransfer<wbr>Status</a>
 		</li>
 	</ul>
 </nav>
@@ -208,12 +205,6 @@
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section ">
-						<h3>Constructors</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="usbdevice.html#constructor" class="tsd-kind-icon">constructor</a></li>
-						</ul>
-					</section>
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
@@ -259,39 +250,6 @@
 						</ul>
 					</section>
 				</div>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-				<a name="constructor" class="tsd-anchor"></a>
-				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">new USBDevice<span class="tsd-signature-symbol">(</span>init<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="usbdevice.html" class="tsd-signature-type">USBDevice</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="usbdevice.html" class="tsd-signature-type">USBDevice</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-						</aside>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>USB Device constructor</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> init: <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="usbdevice.html" class="tsd-signature-type">USBDevice</a><span class="tsd-signature-symbol">&gt;</span></h5>
-								<div class="tsd-comment tsd-typography">
-									<div class="lead">
-										<p>A partial class to initialise values</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="usbdevice.html" class="tsd-signature-type">USBDevice</a></h4>
-					</li>
-				</ul>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -408,13 +366,13 @@
 				<a name="configuration" class="tsd-anchor"></a>
 				<h3>configuration</h3>
 				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> configuration<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a></li>
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> configuration<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
-						<h4 class="tsd-returns-title">Returns <a href="../interfaces/usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a></h4>
 					</li>
 				</ul>
 			</section>
@@ -422,13 +380,13 @@
 				<a name="configurations" class="tsd-anchor"></a>
 				<h3>configurations</h3>
 				<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> configurations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> configurations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="usbconfiguration.html" class="tsd-signature-type">USBConfiguration</a><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
