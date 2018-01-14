@@ -25,7 +25,7 @@ export declare class USBDevice {
     /**
      * @hidden
      */
-    readonly _handle: any;
+    readonly _handle: string;
     /**
      * USB Device constructor
      * @param init A partial class to initialise values
@@ -45,13 +45,13 @@ export declare class USBDevice {
     /**
      * @hidden
      */
-    clearHalt(_direction: USBDirection, _endpointNumber: number): Promise<void>;
+    clearHalt(direction: USBDirection, endpointNumber: number): Promise<void>;
     /**
      * @hidden
      */
-    isochronousTransferIn(_endpointNumber: number, _packetLengths: Array<number>): Promise<USBIsochronousInTransferResult>;
+    isochronousTransferIn(endpointNumber: number, packetLengths: Array<number>): Promise<USBIsochronousInTransferResult>;
     /**
      * @hidden
      */
-    isochronousTransferOut(_endpointNumber: number, _data: BufferSource, _packetLengths: Array<number>): Promise<USBIsochronousOutTransferResult>;
+    isochronousTransferOut(endpointNumber: number, data: BufferSource, packetLengths: Array<number>): Promise<USBIsochronousOutTransferResult>;
 }

@@ -15,6 +15,7 @@ export declare class USB extends EventDispatcher {
      * @event
      */
     static EVENT_DEVICE_DISCONNECT: string;
+    private devices;
     private devicesFound;
     /**
      * USB constructor
