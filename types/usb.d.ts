@@ -6,25 +6,26 @@ import { USBOptions, USBDeviceRequestOptions } from "./interfaces";
  */
 export declare class USB extends EventDispatcher {
     /**
-     * Device Connected event
+     * Allowed device Connected event
      * @event
      */
     static EVENT_DEVICE_CONNECT: string;
     /**
-     * Device Disconnected event
+     * Allowed device Disconnected event
      * @event
      */
     static EVENT_DEVICE_DISCONNECT: string;
-    private devices;
+    private allowedDevices;
     private devicesFound;
     /**
      * USB constructor
      * @param options USB initialisation options
      */
     constructor(options?: USBOptions);
+    private replaceAllowedDevice(device);
     private filterDevice(options, device);
     /**
-     * Gets all Web USB devices connected to the system
+     * Gets all allowed Web USB devices
      * @returns Promise containing an array of devices
      */
     getDevices(): Promise<Array<USBDevice>>;
