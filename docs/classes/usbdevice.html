@@ -106,6 +106,9 @@
 					<a href="usbdevice.html#claiminterface" class="tsd-kind-icon">claim<wbr>Interface</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="usbdevice.html#clearhalt" class="tsd-kind-icon">clear<wbr>Halt</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="usbdevice.html#close" class="tsd-kind-icon">close</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -144,6 +147,12 @@
 			<a href="usbinterface.html" class="tsd-kind-icon">USBInterface</a>
 		</li>
 		<li class=" tsd-kind-interface">
+			<a href="../interfaces/adapter.html" class="tsd-kind-icon">Adapter</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-not-exported">
+			<a href="../interfaces/endpointresult.html" class="tsd-kind-icon">Endpoint<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usbcontroltransferparameters.html" class="tsd-kind-icon">USBControl<wbr>Transfer<wbr>Parameters</a>
 		</li>
 		<li class=" tsd-kind-interface">
@@ -154,18 +163,6 @@
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usbintransferresult.html" class="tsd-kind-icon">USBIn<wbr>Transfer<wbr>Result</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbisochronousintransferpacket.html" class="tsd-kind-icon">USBIsochronous<wbr>InTransfer<wbr>Packet</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbisochronousintransferresult.html" class="tsd-kind-icon">USBIsochronous<wbr>InTransfer<wbr>Result</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbisochronousouttransferpacket.html" class="tsd-kind-icon">USBIsochronous<wbr>Out<wbr>Transfer<wbr>Packet</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbisochronousouttransferresult.html" class="tsd-kind-icon">USBIsochronous<wbr>Out<wbr>Transfer<wbr>Result</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/usboptions.html" class="tsd-kind-icon">USBOptions</a>
@@ -237,6 +234,7 @@
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="usbdevice.html#claiminterface" class="tsd-kind-icon">claim<wbr>Interface</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="usbdevice.html#clearhalt" class="tsd-kind-icon">clear<wbr>Halt</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="usbdevice.html#close" class="tsd-kind-icon">close</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="usbdevice.html#controltransferin" class="tsd-kind-icon">control<wbr>Transfer<wbr>In</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="usbdevice.html#controltransferout" class="tsd-kind-icon">control<wbr>Transfer<wbr>Out</a></li>
@@ -527,6 +525,41 @@
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="clearhalt" class="tsd-anchor"></a>
+				<h3>clear<wbr>Halt</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">clear<wbr>Halt<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><a href="../globals.html#usbdirection" class="tsd-signature-type">USBDirection</a>, endpointNumber<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Clear a halt condition on an endpoint</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>direction: <a href="../globals.html#usbdirection" class="tsd-signature-type">USBDirection</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The direction of the endpoint to clear</p>
+								</div>
+							</li>
+							<li>
+								<h5>endpointNumber: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The endpoint number of the endpoint to clear</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing any error</p>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="close" class="tsd-anchor"></a>
 				<h3>close</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -555,16 +588,29 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Undertake a control transfer in from the device</p>
+							</div>
+							<p><strong>Note:</strong> The transfer result currently has a status always set to &quot;ok&quot;</p>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>setup: <a href="../interfaces/usbcontroltransferparameters.html" class="tsd-signature-type">USBControlTransferParameters</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The USB control transfer parameters</p>
+								</div>
 							</li>
 							<li>
 								<h5>length: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The amount of data to transfer</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbintransferresult.html" class="tsd-signature-type">USBInTransferResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing a result</p>
 					</li>
 				</ul>
 			</section>
@@ -578,16 +624,29 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Undertake a control transfer out to the device</p>
+							</div>
+							<p><strong>Note:</strong> The transfer result currently has a status always set to &quot;ok&quot; and the bytesWritten always set to the length of the data</p>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>setup: <a href="../interfaces/usbcontroltransferparameters.html" class="tsd-signature-type">USBControlTransferParameters</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The USB control transfer parameters</p>
+								</div>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">BufferSource</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The data to transfer</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbouttransferresult.html" class="tsd-signature-type">USBOutTransferResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing a result</p>
 					</li>
 				</ul>
 			</section>
@@ -649,7 +708,13 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Soft reset the device</p>
+							</div>
+						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing any error</p>
 					</li>
 				</ul>
 			</section>
@@ -727,16 +792,29 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Undertake a transfer in from the device</p>
+							</div>
+							<p><strong>Note:</strong> The transfer result currently has a status always set to &quot;ok&quot;</p>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>endpointNumber: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The number of the endpoint to transfer from</p>
+								</div>
 							</li>
 							<li>
 								<h5>length: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The amount of data to transfer</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbintransferresult.html" class="tsd-signature-type">USBInTransferResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing a result</p>
 					</li>
 				</ul>
 			</section>
@@ -750,16 +828,29 @@
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Undertake a transfer out to the device</p>
+							</div>
+							<p><strong>Note:</strong> The transfer result currently has a status always set to &quot;ok&quot; and the bytesWritten always set to the length of the data</p>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>endpointNumber: <span class="tsd-signature-type">number</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The number of the endpoint to transfer to</p>
+								</div>
 							</li>
 							<li>
 								<h5>data: <span class="tsd-signature-type">BufferSource</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>The data to transfer</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/usbouttransferresult.html" class="tsd-signature-type">USBOutTransferResult</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>Promise containing a result</p>
 					</li>
 				</ul>
 			</section>

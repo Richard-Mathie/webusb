@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>USBRecipient | Node WebUSB</title>
+	<title>EndpointResult | Node WebUSB</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -30,25 +30,11 @@
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-enum">
-			<a href="usbrecipient.html" class="tsd-kind-icon">USBRecipient</a>
-			<ul>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="usbrecipient.html#device" class="tsd-kind-icon">device</a>
-				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="usbrecipient.html#endpoint" class="tsd-kind-icon">endpoint</a>
-				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="usbrecipient.html#interface" class="tsd-kind-icon">interface</a>
-				</li>
-				<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
-					<a href="usbrecipient.html#other" class="tsd-kind-icon">other</a>
-				</li>
-			</ul>
+		<li class=" tsd-kind-enum">
+			<a href="../enums/usbrecipient.html" class="tsd-kind-icon">USBRecipient</a>
 		</li>
 		<li class=" tsd-kind-enum">
-			<a href="usbrequesttype.html" class="tsd-kind-icon">USBRequest<wbr>Type</a>
+			<a href="../enums/usbrequesttype.html" class="tsd-kind-icon">USBRequest<wbr>Type</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="../classes/usb.html" class="tsd-kind-icon">USB</a>
@@ -69,28 +55,36 @@
 			<a href="../classes/usbinterface.html" class="tsd-kind-icon">USBInterface</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/adapter.html" class="tsd-kind-icon">Adapter</a>
+			<a href="adapter.html" class="tsd-kind-icon">Adapter</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-is-not-exported">
-			<a href="../interfaces/endpointresult.html" class="tsd-kind-icon">Endpoint<wbr>Result</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbcontroltransferparameters.html" class="tsd-kind-icon">USBControl<wbr>Transfer<wbr>Parameters</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbdevicefilter.html" class="tsd-kind-icon">USBDevice<wbr>Filter</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbdevicerequestoptions.html" class="tsd-kind-icon">USBDevice<wbr>Request<wbr>Options</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbintransferresult.html" class="tsd-kind-icon">USBIn<wbr>Transfer<wbr>Result</a>
+		<li class="current tsd-kind-interface tsd-is-not-exported">
+			<a href="endpointresult.html" class="tsd-kind-icon">Endpoint<wbr>Result</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a href="endpointresult.html#endpoint" class="tsd-kind-icon">endpoint</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a href="endpointresult.html#iface" class="tsd-kind-icon">iface</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usboptions.html" class="tsd-kind-icon">USBOptions</a>
+			<a href="usbcontroltransferparameters.html" class="tsd-kind-icon">USBControl<wbr>Transfer<wbr>Parameters</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="../interfaces/usbouttransferresult.html" class="tsd-kind-icon">USBOut<wbr>Transfer<wbr>Result</a>
+			<a href="usbdevicefilter.html" class="tsd-kind-icon">USBDevice<wbr>Filter</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="usbdevicerequestoptions.html" class="tsd-kind-icon">USBDevice<wbr>Request<wbr>Options</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="usbintransferresult.html" class="tsd-kind-icon">USBIn<wbr>Transfer<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="usboptions.html" class="tsd-kind-icon">USBOptions</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="usbouttransferresult.html" class="tsd-kind-icon">USBOut<wbr>Transfer<wbr>Result</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="../globals.html#usbdirection" class="tsd-kind-icon">USBDirection</a>
@@ -105,49 +99,41 @@
 </nav>
 <div class="container container-main">
 	<div class="content-wrap">
+		<section class="tsd-panel tsd-hierarchy">
+			<h3>Hierarchy</h3>
+			<ul class="tsd-hierarchy">
+				<li>
+					<span class="target">EndpointResult</span>
+				</li>
+			</ul>
+		</section>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Index</h2>
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
-					<section class="tsd-index-section ">
-						<h3>Enumeration members</h3>
+					<section class="tsd-index-section tsd-is-not-exported">
+						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="usbrecipient.html#device" class="tsd-kind-icon">device</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="usbrecipient.html#endpoint" class="tsd-kind-icon">endpoint</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="usbrecipient.html#interface" class="tsd-kind-icon">interface</a></li>
-							<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="usbrecipient.html#other" class="tsd-kind-icon">other</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="endpointresult.html#endpoint" class="tsd-kind-icon">endpoint</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="endpointresult.html#iface" class="tsd-kind-icon">iface</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Enumeration members</h2>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-				<a name="device" class="tsd-anchor"></a>
-				<h3>device</h3>
-				<div class="tsd-signature tsd-kind-icon">device<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;0</span></div>
-				<aside class="tsd-sources">
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
 				<a name="endpoint" class="tsd-anchor"></a>
 				<h3>endpoint</h3>
-				<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;2</span></div>
+				<div class="tsd-signature tsd-kind-icon">endpoint<span class="tsd-signature-symbol">:</span> <a href="../classes/usbendpoint.html" class="tsd-signature-type">USBEndpoint</a></div>
 				<aside class="tsd-sources">
 				</aside>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-				<a name="interface" class="tsd-anchor"></a>
-				<h3>interface</h3>
-				<div class="tsd-signature tsd-kind-icon">interface<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;1</span></div>
-				<aside class="tsd-sources">
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
-				<a name="other" class="tsd-anchor"></a>
-				<h3>other</h3>
-				<div class="tsd-signature tsd-kind-icon">other<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;3</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+				<a name="iface" class="tsd-anchor"></a>
+				<h3>iface</h3>
+				<div class="tsd-signature tsd-kind-icon">iface<span class="tsd-signature-symbol">:</span> <a href="../classes/usbinterface.html" class="tsd-signature-type">USBInterface</a></div>
 				<aside class="tsd-sources">
 				</aside>
 			</section>

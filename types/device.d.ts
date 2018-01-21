@@ -75,6 +75,10 @@ export declare class USBDevice {
      */
     readonly configuration: USBConfiguration;
     /**
+     * @hidden
+     */
+    readonly connected: boolean;
+    /**
      * A flag indicating whether the device is open
      */
     readonly opened: boolean;
@@ -85,11 +89,17 @@ export declare class USBDevice {
     /**
      * @hidden
      */
+    readonly _maxPacketSize: number;
+    /**
+     * @hidden
+     */
     readonly _handle: string;
     /**
      * @hidden
      */
     constructor(init?: Partial<USBDevice>);
+    private getEndpoint(direction, endpointNumber);
+    private setupInvalid(setup);
     /**
      * Opens the device
      */
@@ -123,21 +133,74 @@ export declare class USBDevice {
      * @returns Promise containing any error
      */
     selectAlternateInterface(interfaceNumber: number, alternateSetting: number): Promise<void>;
-    controlTransferIn(setup: USBControlTransferParameters, length: number): Promise<USBInTransferResult>;
-    controlTransferOut(setup: USBControlTransferParameters, data?: BufferSource): Promise<USBOutTransferResult>;
-    transferIn(endpointNumber: number, length: number): Promise<USBInTransferResult>;
-    transferOut(endpointNumber: number, data: BufferSource): Promise<USBOutTransferResult>;
-    reset(): Promise<void>;
     /**
-     * @hidden
+     * Undertake a control transfer in from the device
+     *
+     * __Note:__ The transfer result currently has a status always set to "ok"
+     *
+     * @param setup The USB control transfer parameters
+     * @param length The amount of data to transfer
+     * @returns Promise containing a result
+     */
+    controlTransferIn(setup: USBControlTransferParameters, length: number): Promise<USBInTransferResult>;
+    /**
+     * Undertake a control transfer out to the device
+     *
+     * __Note:__ The transfer result currently has a status always set to "ok" and the bytesWritten always set to the length of the data
+     *
+     * @param setup The USB control transfer parameters
+     * @param data The data to transfer
+     * @returns Promise containing a result
+     */
+    controlTransferOut(setup: USBControlTransferParameters, data?: BufferSource): Promise<USBOutTransferResult>;
+    /**
+     * Clear a halt condition on an endpoint
+     *
+     * @param direction The direction of the endpoint to clear
+     * @param endpointNumber The endpoint number of the endpoint to clear
+     * @returns Promise containing any error
      */
     clearHalt(direction: USBDirection, endpointNumber: number): Promise<void>;
     /**
+     * Undertake a transfer in from the device
+     *
+     * __Note:__ The transfer result currently has a status always set to "ok"
+     *
+     * @param endpointNumber The number of the endpoint to transfer from
+     * @param length The amount of data to transfer
+     * @returns Promise containing a result
+     */
+    transferIn(endpointNumber: number, length: number): Promise<USBInTransferResult>;
+    /**
+     * Undertake a transfer out to the device
+     *
+     * __Note:__ The transfer result currently has a status always set to "ok" and the bytesWritten always set to the length of the data
+     *
+     * @param endpointNumber The number of the endpoint to transfer to
+     * @param data The data to transfer
+     * @returns Promise containing a result
+     */
+    transferOut(endpointNumber: number, data: BufferSource): Promise<USBOutTransferResult>;
+    /**
      * @hidden
+     * Undertake an isochronous transfer in from the device
+     * @param endpointNumber The number of the endpoint to transfer from
+     * @param packetLengths An array of packet lengths outlining the amount to transfer
+     * @returns Promise containing a result
      */
     isochronousTransferIn(endpointNumber: number, packetLengths: Array<number>): Promise<USBIsochronousInTransferResult>;
     /**
      * @hidden
+     * Undertake an isochronous transfer out to the device
+     * @param endpointNumber The number of the endpoint to transfer to
+     * @param data The data to transfer
+     * @param packetLengths An array of packet lengths outlining the amount to transfer
+     * @returns Promise containing a result
      */
     isochronousTransferOut(endpointNumber: number, data: BufferSource, packetLengths: Array<number>): Promise<USBIsochronousOutTransferResult>;
+    /**
+     * Soft reset the device
+     * @returns Promise containing any error
+     */
+    reset(): Promise<void>;
 }
