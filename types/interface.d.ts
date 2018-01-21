@@ -1,13 +1,25 @@
 import { USBAlternateInterface } from "./alternate";
 /**
- * USB Interface class
+ * USB Interface
  */
 export declare class USBInterface {
+    /**
+     * Number of this interface
+     */
     readonly interfaceNumber: number;
+    /**
+     * Array of alternate interfaces
+     */
     readonly alternates: Array<USBAlternateInterface>;
     private _claimed;
+    /**
+     * Whether this interface is claimed
+     */
     readonly claimed: boolean;
     private _currentAlternate;
+    /**
+     * Return the current alternate interface
+     */
     readonly alternate: USBAlternateInterface;
     /**
      * @hidden

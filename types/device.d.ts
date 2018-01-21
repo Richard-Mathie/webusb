@@ -2,7 +2,7 @@ import { USBDirection } from "./enums";
 import { USBControlTransferParameters, USBInTransferResult, USBOutTransferResult, USBIsochronousInTransferResult, USBIsochronousOutTransferResult } from "./interfaces";
 import { USBConfiguration } from "./configuration";
 /**
- * USB Device class
+ * USB Device
  */
 export declare class USBDevice {
     /**

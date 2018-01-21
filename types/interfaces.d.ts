@@ -1,7 +1,7 @@
 import { USBRequestType, USBRecipient, USBTransferStatus } from "./enums";
 import { USBDevice } from "./device";
 /**
- * USB Options interface
+ * USB Options
  */
 export interface USBOptions {
     /**
@@ -9,6 +9,9 @@ export interface USBOptions {
      */
     devicesFound?: (devices: Array<USBDevice>, selectFn: (device: USBDevice) => void) => USBDevice;
 }
+/**
+ * Device filter
+ */
 export interface USBDeviceFilter {
     vendorId?: number;
     productId?: number;
@@ -17,10 +20,15 @@ export interface USBDeviceFilter {
     protocolCode?: number;
     serialnumber?: string;
 }
+/**
+ * Device request options
+ */
 export interface USBDeviceRequestOptions {
     filters: Array<USBDeviceFilter>;
-    deviceFound?: (device: USBDevice, selectFn: any) => void;
 }
+/**
+ * Control transfer parameters
+ */
 export interface USBControlTransferParameters {
     requestType: USBRequestType;
     recipient: USBRecipient;
@@ -28,16 +36,23 @@ export interface USBControlTransferParameters {
     value: number;
     index: number;
 }
+/**
+ * In transfer result
+ */
 export interface USBInTransferResult {
     data?: DataView;
     status: USBTransferStatus;
 }
+/**
+ * Out transfer result
+ */
 export interface USBOutTransferResult {
     bytesWritten: number;
     status: USBTransferStatus;
 }
 /**
  * @hidden
+ * Isochronous transfer packet (in)
  */
 export interface USBIsochronousInTransferPacket {
     data?: DataView;
@@ -45,6 +60,7 @@ export interface USBIsochronousInTransferPacket {
 }
 /**
  * @hidden
+ * Isochronous transfer result (in)
  */
 export interface USBIsochronousInTransferResult {
     data?: DataView;
@@ -52,6 +68,7 @@ export interface USBIsochronousInTransferResult {
 }
 /**
  * @hidden
+ * Isochronous transfer packet (out)
  */
 export interface USBIsochronousOutTransferPacket {
     bytesWritten: number;
@@ -59,6 +76,7 @@ export interface USBIsochronousOutTransferPacket {
 }
 /**
  * @hidden
+ * Isochronous transfer result (out)
  */
 export interface USBIsochronousOutTransferResult {
     packets: Array<USBIsochronousOutTransferPacket>;
